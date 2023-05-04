@@ -16,5 +16,8 @@
     "express-fileupload": "^1.4.0",
     "mongoose": "^7.0.5",
     "nodemon": "^2.0.22"
+  },
+  "engines": {
+    "node": ">=14 <15"
   }
 }
