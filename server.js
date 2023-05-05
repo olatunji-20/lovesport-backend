@@ -95,7 +95,7 @@ app.get("/one-product/:id", (req, res) => {
 app.delete("/one-product/:id", (req, res) => {
     const productId = req.params.id;
 
-    Product.deleteById(productId).then((result) => {
+    Product.deleteOne({_id: productId}).then((result) => {
         res.send(result)
     }).catch((err) => {
         console.log("ERROR DELETE. " + err)
