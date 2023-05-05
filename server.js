@@ -89,7 +89,18 @@ app.get("/one-product/:id", (req, res) => {
     }).catch((err) => {
         console.log("ERROR" + err)
     })
-})
+});
+
+
+app.delete("/one-product/:id", (req, res) => {
+    const productId = req.params.id;
+
+    Product.deleteById(productId).then((result) => {
+        res.send(result)
+    }).catch((err) => {
+        console.log("ERROR DELETE. " + err)
+    })
+});
 
 
 app.listen(PORT, () => {
